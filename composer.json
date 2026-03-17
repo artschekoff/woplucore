@@ -11,6 +11,11 @@
       "name": "Frescoref",
       "email": "frescoref@gmail.com",
       "role": "Developer"
+    },
+    {
+      "name": "artschekoff",
+      "homepage": "https://roxl.net",
+      "role": "Developer"
     }
   ],
   "autoload":
