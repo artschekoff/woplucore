@@ -1,6 +1,7 @@
 {
   "name": "digiom/woplucore",
   "description": "Core for WordPress plugins.",
+  "version": "1.1.0",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "homepage": "https://digiom.ru",
@@ -18,7 +19,7 @@
   },
   "require":
   {
-    "php": ">=7.0",
+    "php": ">=7.4",
     "ext-fileinfo": "*",
     "ext-mbstring": "*"
   }

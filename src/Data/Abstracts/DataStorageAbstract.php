@@ -60,22 +60,15 @@ abstract class DataStorageAbstract implements DataStorageInterface
 	abstract public function isExistingById(int $object_id): bool;
 
 	/**
-	 * Read extra data associated with the object, like button text or code URL for external objects.
+	 * Read extra data associated with the object.
+	 *
+	 * Default implementation is a no-op. Concrete storage classes should override
+	 * this method to read extra data from the appropriate storage (custom meta table, etc.).
 	 *
 	 * @param DataAbstract $data Data object
 	 */
 	protected function readExtraData(&$data)
 	{
-		foreach($data->getExtraDataKeys() as $extra_data_key)
-		{
-			$function = 'set_' . $extra_data_key;
-			if(is_callable([$data, $function]))
-			{
-				$data->{$function}(
-					get_post_meta($data->getId(), '_' . $extra_data_key, true) // todo get_post_meta
-				);
-			}
-		}
 	}
 
 	/**
